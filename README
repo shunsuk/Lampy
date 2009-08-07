@@ -1,0 +1,20 @@
+* Lampy
+
+LampyはHaskellで書いたTropyクローンです。
+
+
+** ファイル構成
+
+- Lampy.hs
+- style.css
+- data
+-- index
+
+
+** 設置方法
+
+コンパイル。utf8-stringが必要です。
+
+ghc --make -o Lampy.cgi Lampy.hs
+
+Lampy.cgi、data、data/indexのパーミッションを755にしてください。
