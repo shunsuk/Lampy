@@ -33,7 +33,7 @@ create entry =
   if 0 < length entry
     then do id <- generateId
             writeFile ("./data/" ++ id) entry
-            appendFile "./data/index" id
+            appendFile "./data/index" (id ++ "\n")
             return id
     else do id <- randomId
             return id
