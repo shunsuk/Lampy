@@ -17,4 +17,4 @@ LampyはHaskellで書いたTropyクローンです。
 
 ghc --make -o Lampy.cgi Lampy.hs
 
-Lampy.cgi、data、data/indexのパーミッションを755にしてください。
+Lampy.cgi、data、data/indexのパーミッションを777にしてください。

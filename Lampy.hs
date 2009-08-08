@@ -90,6 +90,13 @@ navi id = if length id == 0
                     anchor ! [href "?action=new"] << "Create",
                     anchor ! [href "?action=show"] << "Random"]
 
+-- フッター
+footer :: Html
+footer = thediv ! [theclass "footer"] << p
+  << [anchor ! [href "http://d.hatena.ne.jp/shunsuk/"] << "医者を志す妻を応援する夫の日記",
+      br,
+      anchor ! [href "http://github.com/shunsuk/Lampy/tree/master"] << "ソースコード"]
+
 -- エントリーの表示部分
 entry :: String -> String -> Html
 entry t b = thediv ! [theclass "entry"]
@@ -99,8 +106,7 @@ entry t b = thediv ! [theclass "entry"]
 -- ページ全体のレイアウト
 layout :: String -> String -> Html -> Html
 layout id t content =  htmlHeader t +++
-  body << thediv ! [theclass "main"]
-            << [navi id, content]
+  body << thediv ! [theclass "main"] << [navi id, content, footer]
 
 -- showビュー
 showPage :: String -> String -> String -> Html

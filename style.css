@@ -17,6 +17,10 @@ div.navi a {
   margin-left: 8px;
 }
 
+div.footer {
+  font-size: small;
+}
+
 textarea#area {
   font-size: large;
   margin-top: 20px;
