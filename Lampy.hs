@@ -40,9 +40,11 @@ create entry =
 
 -- 更新
 update :: String -> String -> IO String
-update id entry = do
-  writeFile ("./data/" ++ id) entry
-  return id
+update id entry =
+  if 0 < length entry
+     then do writeFile ("./data/" ++ id) entry
+             return id
+     else do return id
 
 --  エントリーを取得
 readEntry :: String -> IO String
